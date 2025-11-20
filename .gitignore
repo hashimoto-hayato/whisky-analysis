@@ -1,0 +1,9 @@
+whisky/
+__pycache__/
+*.pyc
+*.env
+*.db
+*.sqlite
+result/
+whisky_pca_clusters.html
+cluster_profile.csv
