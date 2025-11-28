@@ -35,6 +35,10 @@ def main():
                      hover_data=["Distillery"] + FEATURES,
                      title="Whisky Flavour Map (PCA + KMeans)")
     pio.write_html(fig, file=str(outdir / "whisky_pca_clusters.html"), auto_open=False)
+    # CSV 出力: recommend.py が利用するファイル
+    out_csv = outdir / "whisky_pca_clusters.csv"
+    df.to_csv(out_csv, index=False)
+    print("✅ Saved:", out_csv)
     # 画像保存（必要なら）→ 初回は kaleido が必要: pip install -U kaleido
     # pio.write_image(fig, str(outdir / "whisky_pca_clusters.png"), scale=2)
 
