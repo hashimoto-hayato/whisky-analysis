@@ -11,7 +11,7 @@ def top5_list(df, query, space):
 def main():
     df = pd.read_csv(DETAIL_PATH)
 
-    queries = ["Aberfeldy", "Balmenach", "Bunnahabhain"]  # 好きに減らしてOK
+    queries = ["Aberfeldy", "Balmenach", "Bunnahabhain"]  
 
     for q in queries:
         rec2 = top5_list(df, q, "PCA2")
